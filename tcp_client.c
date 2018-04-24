@@ -174,6 +174,13 @@ int createSocket()
 }
 
 int netserverinit(char * hostname){
+    struct hostent* host;
+    host = gethostbyname(hostname);
+    if(host == NULL){
+        return HOST_NOT_FOUND;
+    }
+	return 0;
+
 	return 0;
 
 }
